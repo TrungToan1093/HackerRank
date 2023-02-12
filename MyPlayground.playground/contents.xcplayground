@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='SparseArrays'/>
+        <page name='CamelCase'/>
+        <page name='Plus Minus'/>
+        <page name='Lonely Integer'/>
+        <page name='Grading Students'/>
+        <page name='Flipping bits'/>
+        <page name='Diagonal Difference'/>
+        <page name='Counting Sort 1'/>
+        <page name='Mini-Max Sum'/>
+        <page name='Counting Valleys'/>
+        <page name='Permuting Two Arrays'/>
+    </pages>
+</playground>
