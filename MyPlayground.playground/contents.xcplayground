@@ -12,5 +12,8 @@
         <page name='Mini-Max Sum'/>
         <page name='Counting Valleys'/>
         <page name='Permuting Two Arrays'/>
+        <page name='Subarray Division 2'/>
+        <page name='XOR Strings 3'/>
+        <page name='Sales by Match'/>
     </pages>
 </playground>
