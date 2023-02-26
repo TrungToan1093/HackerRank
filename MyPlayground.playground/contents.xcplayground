@@ -11,9 +11,17 @@
         <page name='Counting Sort 1'/>
         <page name='Mini-Max Sum'/>
         <page name='Counting Valleys'/>
-        <page name='Permuting Two Arrays'/>
-        <page name='Subarray Division 2'/>
-        <page name='XOR Strings 3'/>
-        <page name='Sales by Match'/>
+        <page name='Permuting Two Arrays w3'/>
+        <page name='Subarray Division 2 w3'/>
+        <page name='XOR Strings 3 w3'/>
+        <page name='Sales by Match w3'/>
+        <page name='Migratory Birds w3'/>
+        <page name='Maximum Perimeter Triangle w3'/>
+        <page name='Combination'/>
+        <page name='Drawing Book w3'/>
+        <page name='Zig Zag Sequence w3'/>
+        <page name='Picking Numbers w4'/>
+        <page name='Left Rotation w4'/>
+        <page name='Number Line Jumps w4'/>
     </pages>
 </playground>
