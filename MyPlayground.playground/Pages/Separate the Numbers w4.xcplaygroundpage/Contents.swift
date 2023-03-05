@@ -5,56 +5,73 @@ import Foundation
 var greeting = "Hello, playground"
 
 //: [Next](@next)
+var result = ""
 func separateNumbers(s: String) -> Void {
-
+    guard s.count > 1 else {
+        print("NO")
+        return
+    }
+    result = "NO"
+    for i in 1...s.count/2 {
+        let first = String(s.prefix(i))
+        let newsString = String(s.dropFirst(i))
+        let displayString = "\(first)"
+        check(currentValue: first, s: newsString, displayString: displayString)
+    }
+    print(result)
 }
 
-func check(range: Int, s: String) {
-    guard range < s.count else { return }
-    
-//    print("range: \(range), s:\(s)")
-    
-    let value = s.prefix(range)
-    let nextstart = s.index(s.startIndex, offsetBy: range)
-    let nextend = s.index(nextstart, offsetBy: range)
-    let nextRange = nextstart..<nextend
-    let nextValue = s[nextRange]
-    
-//    if value + 1 == nextValue {
-//        let count = String(nextValue).count
-//        check(range: count, s: String(s.dropFirst(count)))
-//    } else if value + 1 == nextValue2 {
-//        let count = String(nextValue2).count
-//        check(range: count, s: String(s.dropFirst(count)))
-//    } else {
-////        ==> fail
-//    }
-    
-    
-    
-    if (Int(value) ?? 0) + 1 == (Int(nextValue) ?? 0) {
-        print("value: \(nextValue)")
-        check(range: nextValue.count, s: String(s.dropFirst(nextValue.count)))
-//        ==> pass
-    } else if Int(value.dropLast()) ?? 0 == 9 {
-        let nextend2 = s.index(nextstart, offsetBy: range+1)
-        let nextRange2 = nextstart..<nextend2
-        let nextValue2 = s[nextRange2]
-        if (Int(value) ?? 0) + 1 == (Int(nextValue2) ?? 0) {
-//            ==> pass
-
-            check(range: nextValue2.count, s: String(s.dropFirst(nextValue2.count)))
-        } else {
-            
+func check(currentValue: String, s: String, displayString: String) {
+    let range = currentValue.count
+    if s.isEmpty {
+        result = ("YES \(displayString)")
+        return
+    }
+    let nextValue = String(s.prefix(range))
+    if oneMoreThanCondition(lhs: currentValue, rhs: nextValue) && leadingCodition(value: nextValue) {
+        let newsString = String(s.dropFirst(range))
+//        let newsDisplayString = displayString + " + " + "\"\(nextValue)\""
+        check(currentValue: nextValue, s: newsString, displayString: displayString)
+    } else if range + 1 <= s.count {
+        let next2Value = String(s.prefix(range + 1))
+        if oneMoreThanCondition(lhs: currentValue, rhs: next2Value) && leadingCodition(value: next2Value) {
+            let newsString = String(s.dropFirst(range + 1))
+//            let newsDisplayString = displayString + " + " + "\"\(next2Value)\""
+            check(currentValue: next2Value, s: newsString, displayString: displayString)
         }
-    } else {
-        
     }
 }
 
-check(range: 1, s: "12345")
+func oneMoreThanCondition(lhs: String, rhs: String) -> Bool {
+    let lhsInt = Int(lhs) ?? 0
+    let rhsInt = Int(rhs) ?? 0
+    return lhsInt + 1 == rhsInt
+}
 
-separateNumbers(s: "123")
+func leadingCodition(value: String) -> Bool {
+    return value.first != "0"
+}
+
+separateNumbers(s: "789")
+
+//
+//91011
+//
+//input:
+//currentValue
+//List
+//
+//
+//get count = currentValue.count
+//guard count <= list.count else return
+//
+//
+//> range = count
+//get nextValue = list[0...<range]
+//
+//
+//
+//check(range: 1, s: "12345")
 //"1234" => "1" "2" "3" "4"
 //1 2 => passwd
 //2
