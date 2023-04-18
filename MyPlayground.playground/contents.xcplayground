@@ -4,13 +4,14 @@
         <page name='SparseArrays'/>
         <page name='CamelCase'/>
         <page name='Plus Minus'/>
-        <page name='Lonely Integer'/>
-        <page name='Grading Students'/>
-        <page name='Flipping bits'/>
-        <page name='Diagonal Difference'/>
-        <page name='Counting Sort 1'/>
+        <page name='Lonely Integer w2'/>
+        <page name='Grading Students w2'/>
+        <page name='Flipping bits w2'/>
+        <page name='Diagonal Difference w2'/>
+        <page name='Counting Sort 1 w2'/>
         <page name='Mini-Max Sum'/>
-        <page name='Counting Valleys'/>
+        <page name='Counting Valleys w2'/>
+        <page name='Pangrams w2'/>
         <page name='Permuting Two Arrays w3'/>
         <page name='Subarray Division 2 w3'/>
         <page name='XOR Strings 3 w3'/>
@@ -23,5 +24,8 @@
         <page name='Picking Numbers w4'/>
         <page name='Left Rotation w4'/>
         <page name='Number Line Jumps w4'/>
+        <page name='Closest Numbers w4'/>
+        <page name='Separate the Numbers w4'/>
+        <page name='Mars Exploration w2'/>
     </pages>
 </playground>
